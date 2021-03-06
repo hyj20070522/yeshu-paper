@@ -1,22 +1,26 @@
 #include<iostream>
 using namespace std;
-int n,ans1,ans2,ans3;
+int n;
 int counted();
 int formula1();
 int formula2();
 int main()
 {
-    cout<<"请输入边长n的值:";
-    cin>>n;
-    ans1=counted();
-    ans2=formula1();
-    ans3=formula2();
-    cout<<"答案："<<endl<<"枚举："<<ans1<<endl<<"公式："<<ans2<<endl<<"分类公式："<<ans3<<endl;
-    if(ans1==ans2&&ans1==ans3)
-      cout<<"公式正确！"<<endl;
-    else
-      cout<<"公式错误！"<<endl;
-    cin>>n;
+	int ans1,ans2,ans3;
+    while(1)
+    {
+		n=0;
+		cout<<"请输入边长n的值:";
+    	cin>>n;
+	    ans1=counted();
+    	ans2=formula1();
+    	ans3=formula2();
+    	cout<<"答案："<<endl<<"枚举："<<ans1<<endl<<"公式："<<ans2<<endl<<"分类公式："<<ans3<<endl;
+    	if(ans1==ans2&&ans1==ans3)
+    	  cout<<"公式正确！"<<endl<<endl;
+    	else
+    	  cout<<"公式错误！"<<endl<<endl;
+	}
     return 0;
 }
 
